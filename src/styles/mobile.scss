@@ -1,7 +1,7 @@
-﻿@use 'kit/variables' as *;
+﻿// ВСІ @use ДИРЕКТИВИ НА ПОЧАТКУ
+@use 'kit/variables' as *;
 @use 'kit/functions' as *;
 @use 'kit/mixins' as *;
-
 @use 'header.mobile';
 @use 'menu.mobile';
 @use 'hero.mobile';
@@ -9,9 +9,10 @@
 @use 'video-section.mobile';
 @use 'footer.mobile';
 
-@include mobile-tablet {
-  .container {
-    width: 100%;
-    max-width: none;
-  }
+// БАЗОВІ МОБІЛЬНІ СТИЛІ
+@include mobile-tablet { 
+  .container { 
+    width: 100%; 
+    max-width: none; 
+  } 
 }
