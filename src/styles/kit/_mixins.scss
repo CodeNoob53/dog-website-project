@@ -1,3 +1,6 @@
+// ІМПОРТУЄМО ЗМІННІ НА ПОЧАТКУ МІКСИНІВ
+@use 'variables' as *;
+
 // Media queries
 @mixin mobile {
   @media (max-width: #{$breakpoint-mobile - 1px}) {

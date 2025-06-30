@@ -1,3 +1,6 @@
+// ІМПОРТУЄМО ЗМІННІ НА ПОЧАТКУ ФУНКЦІЙ
+@use 'variables' as *;
+
 // Convert px to rem
 @function rem($px, $base: 16px) {
   @return ($px / $base) * 1rem;
