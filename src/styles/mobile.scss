@@ -2,5 +2,16 @@
 @use 'kit/functions' as *;
 @use 'kit/mixins' as *;
 
-@include mobile-tablet { .container { width: 100%; max-width: none; } }
-@use 'header.mobile'; @use 'menu.mobile'; @use 'hero.mobile'; @use 'text-section.mobile'; @use 'video-section.mobile'; @use 'footer.mobile';
+@use 'header.mobile';
+@use 'menu.mobile';
+@use 'hero.mobile';
+@use 'text-section.mobile';
+@use 'video-section.mobile';
+@use 'footer.mobile';
+
+@include mobile-tablet {
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --reporters=jest-junit",
     "build": "echo \"Dummy build script for Autocode\"",
-    "compile": "sass src/styles/style.scss src/dist/style.css && sass src/dist/mobile.scss src/dist/mobile.css",
+    "compile": "sass src/styles/style.scss src/dist/style.css && sass src/styles/mobile.scss src/dist/mobile.css",
     "prod": "npm run compile && postcss src/dist/style.css --use autoprefixer cssnano --output src/dist/style.min.css && purgecss --css src/dist/style.css --content src/index.html --output src/dist/",
     "lint": "stylelint \"src/styles/**/*.scss\" --fix",
     "watch": "sass --watch src/styles:src/dist",
