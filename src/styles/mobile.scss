@@ -1,20 +1,6 @@
-// Import utilities
-@import 'kit/variables';
-@import 'kit/functions';
-@import 'kit/mixins';
+﻿@use 'kit/variables' as *;
+@use 'kit/functions' as *;
+@use 'kit/mixins' as *;
 
-// Mobile-specific styles
-@include mobile-tablet {
-  .container {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-// Import mobile component styles
-@import 'header.mobile';
-@import 'menu.mobile';
-@import 'hero.mobile';
-@import 'text-section.mobile';
-@import 'video-section.mobile';
-@import 'footer.mobile';
+@include mobile-tablet { .container { width: 100%; max-width: none; } }
+@use 'header.mobile'; @use 'menu.mobile'; @use 'hero.mobile'; @use 'text-section.mobile'; @use 'video-section.mobile'; @use 'footer.mobile';

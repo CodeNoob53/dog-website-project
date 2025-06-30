@@ -1,3 +1,7 @@
+﻿@use 'kit/variables' as *;
+@use 'kit/functions' as *;
+@use 'kit/mixins' as *;
+
 // Text section mobile styles
 @include mobile-tablet {
   .text-section {
