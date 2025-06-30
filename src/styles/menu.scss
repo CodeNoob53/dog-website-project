@@ -1,0 +1,103 @@
+// Menu styles for desktop
+.menu {
+  position: relative;
+
+  &__toggle {
+    display: none;
+  }
+
+  &__burger-container {
+    display: none;
+    height: 100%;
+    width: 1.875rem; // 30px
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__burger,
+  &__burger::before,
+  &__burger::after {
+    display: block;
+    background-color: $color-white;
+    position: absolute;
+    height: 0.25rem; // 4px
+    width: 1.875rem; // 30px
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 0.125rem; // 2px
+  }
+
+  &__burger::before {
+    content: '';
+    margin-top: -0.5rem; // -8px
+  }
+
+  &__burger::after {
+    content: '';
+    margin-top: 0.5rem; // 8px
+  }
+
+  // Burger animation when checked
+  &__toggle:checked + &__burger-container &__burger::before {
+    margin-top: 0;
+    transform: rotate(405deg);
+  }
+
+  &__toggle:checked + &__burger-container &__burger {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  &__toggle:checked + &__burger-container &__burger::after {
+    margin-top: 0;
+    transform: rotate(-405deg);
+  }
+
+  // Desktop menu list
+  &__list {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem; // 40px
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    @include nav-text;
+    color: $color-white;
+    text-decoration: none;
+    transition: opacity $transition-normal;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      opacity: 0.8;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    // Bottom border hover effect
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1.25rem; // -20px
+      left: 0;
+      width: 0;
+      height: 0.125rem; // 2px
+      background: $color-white;
+      transition: width $transition-normal;
+    }
+
+    // Active state
+    &--active::after {
+      width: 100%;
+    }
+  }
+}

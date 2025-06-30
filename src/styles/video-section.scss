@@ -1,0 +1,99 @@
+// Video section styles for desktop
+.video-section {
+  width: 100%;
+  min-height: 39.8125rem; // 637px
+  position: relative;
+  @include background-cover('../assets/video_plaseholder.jpg', rgba(0, 0, 0, 0.4));
+  
+  // Flexbox layout for centering content
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-2xl 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 32.5rem; // 520px
+    gap: $spacing-xl;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    @include heading-medium;
+    color: $color-white;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    
+    // Responsive font size
+    font-size: clamp(2rem, 4vw, 3.875rem); // 32px - 62px
+    line-height: 1.1;
+    max-width: 31.5625rem; // 505px
+  }
+
+  &__play-btn {
+    @include play-button;
+    @include hover-scale(1.05);
+    margin: $spacing-lg 0;
+    border: none;
+    position: relative;
+    
+    // Additional hover effects
+    &:hover {
+      transform: scale(1.05) rotate(-5deg);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+      outline: 3px solid $color-white;
+      outline-offset: 3px;
+    }
+
+    // Active state
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  &__play-icon {
+    font-size: 2.875rem; // 46px
+    color: $color-secondary;
+    line-height: 1;
+    margin-left: 0.25rem; // Slight offset for visual centering
+    
+    // Add subtle text shadow
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &__description {
+    @include text-large;
+    color: $color-white;
+    text-align: center;
+    line-height: $line-height-loose;
+    max-width: 32.25rem; // 516px
+    margin-top: $spacing-md;
+    
+    // Add text shadow for better readability
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// Dark overlay for better text contrast
+.video-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}

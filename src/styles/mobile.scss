@@ -1,0 +1,20 @@
+// Import utilities
+@import 'kit/variables';
+@import 'kit/functions';
+@import 'kit/mixins';
+
+// Mobile-specific styles
+@include mobile-tablet {
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+// Import mobile component styles
+@import 'header.mobile';
+@import 'menu.mobile';
+@import 'hero.mobile';
+@import 'text-section.mobile';
+@import 'video-section.mobile';
+@import 'footer.mobile';

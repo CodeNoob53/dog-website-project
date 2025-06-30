@@ -1,0 +1,36 @@
+{
+  "name": "dog-website-project",
+  "version": "1.0.0",
+  "description": "Dog website project with SCSS compilation and build tools",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "jest --reporters=jest-junit",
+    "build": "echo \"Dummy build script for Autocode\"",
+    "compile": "sass src/styles/style.scss src/dist/style.css && sass src/styles/mobile.scss src/dist/mobile.css",
+    "prod": "npm run compile && postcss src/dist/style.css --use autoprefixer cssnano --output src/dist/style.min.css && purgecss --css src/dist/style.css --content src/index.html --output src/dist/",
+    "lint": "stylelint \"src/styles/**/*.scss\" --fix",
+    "watch": "sass --watch src/styles:src/dist",
+    "dev": "npm run compile && npm run watch"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5",
+    "postcss": "^8.4.32",
+    "postcss-cli": "^11.0.0",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.2",
+    "purgecss": "^5.0.0",
+    "stylelint": "^16.0.2",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "prettier": "^3.1.1",
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0"
+  },
+  "keywords": [
+    "html",
+    "scss",
+    "responsive",
+    "website"
+  ],
+  "author": "Student",
+  "license": "MIT"
+}

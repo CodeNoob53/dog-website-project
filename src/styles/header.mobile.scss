@@ -1,0 +1,17 @@
+// Header mobile styles
+@include mobile-tablet {
+  .header {
+    &__content {
+      padding: 0 $spacing-md;
+    }
+
+    &__title {
+      font-size: $font-size-md;
+    }
+  }
+
+  // Adjust main margin for mobile
+  .main {
+    margin-top: 4.875rem; // Keep same header height
+  }
+}

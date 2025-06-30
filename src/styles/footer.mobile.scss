@@ -1,0 +1,133 @@
+// Footer mobile styles
+@include mobile-tablet {
+  .footer {
+    padding: $spacing-xl 0;
+
+    &__content {
+      // Switch to simpler flexbox layout for mobile
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: $spacing-lg;
+      padding: 0 $spacing-md;
+      
+      // Reset grid areas
+      grid-template-areas: none;
+      grid-template-columns: none;
+      grid-template-rows: none;
+    }
+
+    &__logo-section {
+      order: 1;
+      align-items: center;
+      gap: $spacing-sm;
+    }
+
+    &__logo {
+      width: 6rem; // Smaller on mobile
+      height: 5.5rem;
+    }
+
+    &__project-title {
+      font-size: $font-size-sm;
+      letter-spacing: 0.15rem;
+    }
+
+    &__address {
+      order: 2;
+      text-align: center;
+      line-height: $line-height-relaxed;
+    }
+
+    &__email {
+      order: 3;
+      text-align: center;
+      white-space: normal;
+    }
+
+    &__copyright {
+      order: 4;
+      text-align: center;
+      white-space: normal;
+      font-size: $font-size-xs;
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    padding: $spacing-lg 0;
+
+    &__content {
+      gap: $spacing-md;
+      padding: 0 $spacing-sm;
+    }
+
+    &__logo {
+      width: 5rem;
+      height: 4.5rem;
+    }
+
+    &__project-title {
+      font-size: $font-size-xs;
+      letter-spacing: 0.1rem;
+    }
+
+    &__address,
+    &__email {
+      font-size: $font-size-xs;
+    }
+
+    &__copyright {
+      font-size: 0.75rem;
+      margin-top: $spacing-xs;
+    }
+  }
+}
+
+// Tablet specific adjustments
+@include tablet {
+  .footer {
+    &__content {
+      // 2x2 grid layout for tablet
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: $spacing-lg;
+      text-align: center;
+      
+      grid-template-areas:
+        'logo address'
+        'project email'
+        'copyright copyright';
+    }
+
+    &__logo-section {
+      grid-area: logo;
+      justify-self: center;
+    }
+
+    &__address {
+      grid-area: address;
+      justify-self: center;
+    }
+
+    &__project-title {
+      grid-area: project;
+      justify-self: center;
+    }
+
+    &__email {
+      grid-area: email;
+      justify-self: center;
+    }
+
+    &__copyright {
+      grid-area: copyright;
+      justify-self: center;
+      grid-column: 1 / -1;
+      margin-top: $spacing-sm;
+    }
+  }
+}

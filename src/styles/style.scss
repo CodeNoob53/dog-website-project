@@ -1,0 +1,72 @@
+// Import utilities
+@import 'kit/variables';
+@import 'kit/functions'; 
+@import 'kit/mixins';
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Nerko+One:400|Poppins:400|Oswald:400');
+
+// Global styles and reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include text-body;
+  background-color: #d6d6d6;
+  @include flex-center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  background-color: $color-white;
+  width: 100%;
+  max-width: $container-max-width;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+// Import component styles
+@import 'header';
+@import 'menu';
+@import 'hero';
+@import 'text-section';
+@import 'video-section';
+@import 'footer';
+
+// Keyframes for animations
+@keyframes rotate-logo {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes zoom-pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

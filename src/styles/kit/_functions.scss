@@ -1,0 +1,43 @@
+// Convert px to rem
+@function rem($px, $base: 16px) {
+  @return ($px / $base) * 1rem;
+}
+
+// Convert px to em
+@function em($px, $base: 16px) {
+  @return ($px / $base) * 1em;
+}
+
+// Strip units from value
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// Calculate responsive font size
+@function fluid-size($min, $max, $min-vw: $breakpoint-mobile, $max-vw: $breakpoint-desktop) {
+  @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+}
+
+// Color functions
+@function alpha($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+// Z-index function
+@function z($layer) {
+  @if map-has-key($z-layers, $layer) {
+    @return map-get($z-layers, $layer);
+  }
+  @warn "Unknown z-index layer: #{$layer}";
+  @return null;
+}
+
+$z-layers: (
+  'dropdown': 100,
+  'modal': 1000,
+  'tooltip': 1100,
+  'header': 10,
+  'hero-content': 3,
+  'hero-overlay': 2,
+  'hero-bg': 1
+);

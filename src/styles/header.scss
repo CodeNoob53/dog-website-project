@@ -1,0 +1,29 @@
+// Header styles for desktop
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.875rem; // 78px
+  background-color: $color-primary;
+  z-index: z('header');
+
+  &__content {
+    @include container;
+    height: 100%;
+    @include flex-between;
+    padding: 0 9.5rem; // 152px
+  }
+
+  &__title {
+    @include nav-text;
+    color: $color-white;
+    font-size: $font-size-lg;
+    letter-spacing: 0.125rem;
+  }
+}
+
+// Offset for fixed header
+.main {
+  margin-top: 4.875rem; // 78px
+}

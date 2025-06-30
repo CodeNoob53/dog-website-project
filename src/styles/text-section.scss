@@ -1,0 +1,85 @@
+// Text section styles for desktop
+.text-section {
+  width: 100%;
+  background-color: $color-white;
+  padding: $spacing-3xl 0;
+  
+  // Grid layout for section
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, $container-max-width) 1fr;
+  grid-template-areas: '. content .';
+
+  &__content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 $spacing-xl;
+    gap: $spacing-lg;
+  }
+
+  &__title {
+    @include heading-medium;
+    color: $color-text-dark;
+    text-align: center;
+    max-width: 51.375rem; // 822px
+    margin-bottom: $spacing-md;
+    
+    // Responsive font size
+    font-size: clamp(2.5rem, 5vw, 4.375rem); // 40px - 70px
+    line-height: 1.15;
+  }
+
+  &__subtitle {
+    font-family: $font-accent;
+    font-size: $font-size-xl;
+    text-align: center;
+    line-height: $line-height-loose;
+    color: $color-text-medium;
+    max-width: 31.25rem; // 500px
+    margin-bottom: $spacing-lg;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-2xl; // 57px in original
+    width: 100%;
+    max-width: 56.6875rem; // 907px
+    margin-bottom: $spacing-xl;
+  }
+
+  &__column {
+    @include text-body;
+    color: $color-text-medium;
+    line-height: $line-height-relaxed;
+    
+    // Better text spacing
+    p {
+      margin: 0;
+      text-align: justify;
+      hyphens: auto;
+    }
+  }
+
+  &__button {
+    @include button-primary;
+    @include hover-rotate(3deg);
+    align-self: center;
+    
+    // Additional button styling
+    min-width: 7.5rem;
+    height: 2.25rem; // 36px
+    border-radius: 1.125rem; // 18px
+    
+    &:focus {
+      outline: 2px solid $color-secondary;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// Add some breathing room
+.text-section + .video-section {
+  margin-top: 0;
+}

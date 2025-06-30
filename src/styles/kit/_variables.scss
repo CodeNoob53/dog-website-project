@@ -1,0 +1,68 @@
+// Colors
+$color-primary: #5a4531;
+$color-secondary: #b77844;
+$color-accent: #f5f2ee;
+$color-text-dark: #464547;
+$color-text-medium: #666;
+$color-white: #fff;
+$color-black: #000;
+
+// Color variations
+$color-white-70: rgba(255, 255, 255, 0.7);
+$color-overlay: rgba(0, 0, 0, 0.3);
+
+// Typography
+$font-primary: 'Source Sans Pro', Helvetica, sans-serif;
+$font-heading: 'Nerko One', Helvetica;
+$font-accent: 'Poppins', Helvetica;
+$font-button: 'Oswald', Helvetica;
+
+// Font sizes
+$font-size-xs: 0.875rem;   // 14px
+$font-size-sm: 1rem;       // 16px
+$font-size-md: 1.125rem;   // 18px
+$font-size-lg: 1.25rem;    // 20px
+$font-size-xl: 1.5rem;     // 24px
+$font-size-2xl: 3.875rem;  // 62px
+$font-size-3xl: 4.375rem;  // 70px
+$font-size-4xl: 6rem;      // 96px
+
+// Line heights
+$line-height-tight: 1;
+$line-height-normal: 1.2;
+$line-height-relaxed: 1.4;
+$line-height-loose: 1.6;
+
+// Spacing
+$spacing-xs: 0.5rem;   // 8px
+$spacing-sm: 1rem;     // 16px
+$spacing-md: 1.5rem;   // 24px
+$spacing-lg: 2rem;     // 32px
+$spacing-xl: 3rem;     // 48px
+$spacing-2xl: 4rem;    // 64px
+$spacing-3xl: 6rem;    // 96px
+
+// Breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+
+// Container
+$container-max-width: 1200px;
+$container-padding: 2rem;
+
+// Border radius
+$border-radius-sm: 0.25rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 1rem;
+$border-radius-full: 50%;
+
+// Transitions
+$transition-fast: 0.15s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Z-index
+$z-index-dropdown: 100;
+$z-index-modal: 1000;
+$z-index-tooltip: 1100;

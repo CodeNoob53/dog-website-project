@@ -1,0 +1,76 @@
+// Hero mobile styles
+@include mobile-tablet {
+  .hero {
+    min-height: 70vh;
+    padding: $spacing-lg 0;
+    
+    // Change to flexbox for simpler mobile layout
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 $spacing-md;
+      width: 100%;
+      max-width: 90%;
+      gap: $spacing-md;
+    }
+
+    &__logo {
+      width: 100%;
+      max-width: 12rem; // Smaller on mobile
+      height: auto;
+      margin-bottom: $spacing-sm;
+    }
+
+    &__title {
+      font-size: clamp(2rem, 12vw, 3.5rem);
+      line-height: 1.1;
+      margin: $spacing-md 0;
+      max-width: 100%;
+    }
+
+    &__description {
+      font-size: $font-size-md;
+      line-height: $line-height-relaxed;
+      max-width: 100%;
+      margin-top: $spacing-sm;
+    }
+  }
+
+  // Adjust overlay for mobile
+  .hero::before {
+    background: linear-gradient(
+      180deg,
+      rgba(245, 242, 238, 0.95) 0%,
+      rgba(245, 242, 238, 0.8) 50%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  }
+}
+
+@include mobile {
+  .hero {
+    min-height: 60vh;
+    
+    &__content {
+      padding: 0 $spacing-sm;
+    }
+
+    &__logo {
+      max-width: 10rem;
+    }
+
+    &__title {
+      font-size: clamp(1.75rem, 10vw, 2.5rem);
+    }
+
+    &__description {
+      font-size: $font-size-sm;
+    }
+  }
+}
