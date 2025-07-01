@@ -7,8 +7,8 @@
   width: 100%;
   min-height: 43.125rem; // 690px
   position: relative;
-  @include background-cover('../assets/dog_hero.jpg', $color-overlay);
-  
+
+  background-image: url('/src/assets/dog_hero.jpg');
   // Grid layout for content positioning
   display: grid;
   grid-template-columns: 1fr minmax(auto, $container-max-width) 1fr;

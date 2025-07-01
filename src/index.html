@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Dog Website</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="dist/mobile.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Nerko+One:400|Poppins:400|Oswald:400" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation -->
+        <header class="header">
+            <div class="header__content">
+                <!-- Project Title -->
+                <div class="header__title">Project</div>
+                
+                <!-- Navigation Menu with Burger -->
+                <nav class="menu">
+                    <!-- Hidden checkbox for burger toggle -->
+                    <input id="menu-toggle" type="checkbox" class="menu__toggle" />
+                    
+                    <!-- Burger button -->
+                    <label class="menu__burger-container" for="menu-toggle">
+                        <div class="menu__burger"></div>
+                    </label>
+                    
+                    <!-- Menu list -->
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#projects" class="menu__link">Projects</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#about" class="menu__link menu__link--active">About Us</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#stories" class="menu__link">Stories</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#contact" class="menu__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <img class="hero__overlay" src="./assets/dog_paws_desc.png" alt="Hero Image Overlay">
+                <div class="hero__content">
+                    <img class="hero__logo" src="./assets/logo dog.png" alt="Logo dog">
+                    <h1 class="hero__title">Your Headline<br>Here</h1>
+                    <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</p>
+                </div>
+            </section>
+
+            <!-- Text Content Section -->
+            <article class="text-section" id="about">
+                <div class="text-section__content">
+                    <h2 class="text-section__title">This is the Section Headline,<br>Continues to Two Lines</h2>
+                    <p class="text-section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</p>
+                    
+                    <div class="text-section__columns">
+                        <div class="text-section__column">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
+                        </div>
+                        <div class="text-section__column">
+                            <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    
+                    <button class="text-section__button">Read More</button>
+                </div>
+            </article>
+
+            <!-- Video Section -->
+            <section class="video-section" id="stories">
+                <div class="video-section__content">
+                    <h2 class="video-section__title">Learn more<br>about our culture...</h2>
+                    
+                    <!-- Play Button with ▶ symbol -->
+                    <button class="video-section__play-btn" aria-label="Play video">
+                        <span class="video-section__play-icon">&#9654;</span>
+                    </button>
+                    
+                    <p class="video-section__description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <div class="footer__content">
+                <div class="footer__logo-section">
+                    <img class="footer__logo" src="assets/logo dog_2.png" alt="Logo dog">
+                    <div class="footer__project-title">Project</div>
+                </div>
+                
+                <address class="footer__address">
+                    123 Street,<br>
+                    Anytown, USA 12345
+                </address>
+                
+                <!-- Email Link -->
+                <a class="footer__email" href="mailto:hello@website.com">hello@website.com</a>
+                
+                <div class="footer__copyright">© 2021 Project. All rights reserved</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
